@@ -1,4 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);* {
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700);@import url(https://fonts.googleapis.com/css2?family=Mulish:wght@300;
+
+500;600;700&display=swap);* {
   box-sizing: border-box;
 }
 
@@ -139,335 +141,249 @@ table {
   border-spacing: 0;
 }
 
-#welcome {
-  display: grid;
-  grid-template-columns: 350px 1fr;
-  width: 100%;
-  height: 100vh;
+#aboutPage {
+  padding: 100px;
 }
 
-#welcome .welcome-menu {
-  background: white;
+#aboutPage p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #aboutPage {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #aboutPage {
+    padding: 20px;
+  }
+}
+
+#waitlistPage {
   padding: 50px;
-  position: relative;
 }
 
-#welcome .welcome-menu .logo {
+#waitlistPage .title {
+  text-align: start;
+}
+
+#waitlistPage p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+#waitlistPage form .form-group label {
+  font-weight: 700;
+  color: #000;
+}
+
+#waitlistPage form .form-group .form-control {
+  padding: 10px !important;
+  border: 2px solid #000;
+  font-size: 1.2rem;
+  height: auto;
+}
+
+#waitlistPage form .form-group button[type=submit] {
+  background: #000;
+  padding: 10px 25px;
+  border: none;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #waitlistPage {
+    padding: 50px;
+  }
+
+  #waitlistPage .title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #waitlistPage {
+    padding: 50px;
+  }
+
+  #waitlistPage .title {
+    font-size: 1.6rem;
+  }
+}
+
+#eventsPage {
+  padding: 100px;
+}
+
+#eventsPage .title {
+  text-align: start;
+}
+
+#eventsPage p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+#eventsPage form .form-group label {
+  font-weight: 700;
+  color: #000;
+}
+
+#eventsPage form .form-group .form-control {
+  padding: 10px !important;
+  border: 2px solid #000;
+  font-size: 1.2rem;
+  height: auto;
+}
+
+#eventsPage form .form-group button[type=submit] {
+  background: #000;
+  padding: 10px 25px;
+  border: none;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #eventsPage {
+    padding: 50px;
+  }
+
+  #eventsPage .title {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #eventsPage {
+    padding: 50px;
+  }
+
+  #eventsPage .title {
+    font-size: 1.6rem;
+  }
+}
+
+#menuPage {
+  padding: 50px;
+}
+
+#menuPage #foodPreview {
+  padding: 0;
+  background: transparent;
+}
+
+#menuPage #foodPreview .sectionTitle {
+  color: white;
+}
+
+#menuPage #foodPreview .leftBtn,
+#menuPage #foodPreview .rightBtn {
+  background: black;
+}
+
+#menuPage p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #menuPage {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #menuPage {
+    padding: 20px;
+  }
+}
+
+#singleMenuPage {
+  padding: 50px;
+}
+
+#singleMenuPage .title {
+  margin-bottom: 2rem;
+}
+
+#singleMenuPage .item {
+  margin-bottom: 2rem;
+}
+
+#singleMenuPage .item .subtitle {
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  justify-content: space-between;
 }
 
-#welcome .welcome-menu .logo img {
-  max-width: 100px;
-}
-
-#welcome .welcome-menu .menu {
-  margin-bottom: 50px;
-}
-
-#welcome .welcome-menu .menu .menu-title {
-  text-transform: uppercase;
-  color: #0971ce;
+#singleMenuPage .item .subtitle h5,
+#singleMenuPage .item .subtitle .price {
   font-weight: 700;
   font-size: 1.2rem;
-  border-bottom: 1px solid #e2eaef;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
 }
 
-#welcome .welcome-menu .menu .links li a {
-  font-size: 1.1rem;
-  color: black;
-  font-weight: 700;
-  text-decoration: none;
-  margin-bottom: 1.4rem;
-  display: block;
-  transition: color 0.3s ease-in-out;
-}
-
-#welcome .welcome-menu .menu .links li a:hover {
-  color: red;
-}
-
-#welcome .welcome-menu .social-icons {
-  display: flex;
-}
-
-#welcome .welcome-menu .social-icons a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #c2c8cc;
+#singleMenuPage .item .description {
   font-size: 0.9rem;
-  text-decoration: none;
-  color: white;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  margin-right: 10px;
 }
 
-#welcome .welcome-menu .location {
-  align-self: center;
-  position: absolute;
-  bottom: 100px;
+@media (min-width: 0px) and (max-width: 767px) {
+  #singleMenuPage {
+    padding: 20px;
+  }
 }
 
-#welcome .welcome-menu .location .address {
-  color: #7a8d99;
-  margin-bottom: 20px;
-  line-height: 1.7;
+@media (min-width: 768px) and (max-width: 992px) {
+  #singleMenuPage {
+    padding: 20px;
+  }
 }
 
-#welcome .welcome-menu .location .phone-number a {
-  color: #0971ce;
-  font-size: 2rem;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-#welcome .welcome-jumbo {
-  max-width: calc(100vw - 350px);
+.welcomeJumbo {
+  transform: translate3d(250px, 0, 0);
+  max-width: calc(100vw - 250px);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #ed4852;
+  background: #ed1b2e;
   /* Old browsers */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
+  background: radial-gradient(ellipse at center, #ed1b2e 1%, #333333 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   overflow: hidden;
-  padding: 100px;
 }
 
-#welcome .welcome-jumbo .status {
-  display: inline-block;
-  padding: 10px 15px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: white;
-  background: black;
-  border-radius: 5px;
-  align-self: flex-start;
-  margin-bottom: 20px;
-}
-
-#welcome .welcome-jumbo h1 {
-  font-size: 4rem;
-  font-weight: 900;
-  align-self: flex-start;
-  color: white;
+.welcomeJumbo .titleInfo {
   margin-bottom: 100px;
 }
 
-#welcome .welcome-jumbo .burger-fries {
-  width: 100%;
-  position: relative;
+.welcomeJumbo .titleInfo .sectionTitle {
+  color: #f2f2f2;
+  align-self: center;
 }
 
-#information {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 100vh;
-}
-
-#information .restaurant-image {
-  overflow: hidden;
-  height: 100%;
-}
-
-#information .restaurant-image img {
-  width: 100%;
-}
-
-#information .info {
-  padding: 100px 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#information .info .paragraphs {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 20px;
-  line-height: 1.7;
-  color: #525e66;
-  font-size: 1.1rem;
-  margin-bottom: 3rem;
-}
-
-#information .info .about-link {
-  font-size: 1.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: black;
+.welcomeJumbo .titleInfo .city {
+  align-self: center;
+  background: #f2f2f2;
+  padding: 8px 15px;
+  display: inline-block;
+  border-radius: 3px;
+  font-size: 0.9rem;
   font-weight: 700;
 }
 
-#information .info .about-link span {
-  margin-right: 20px;
-}
-
-#information .info .about-link .circle-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  background: #ed4852;
-  /* Old browsers */
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #ed4852 0%, #9c1b24 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-}
-
-#information .info .about-link .circle-right .fa-chevron-right {
-  color: white;
-  font-size: 1.3rem;
-}
-
-#food-preview {
-  background: #f4f8fb;
-  padding: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-#food-preview h2 {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-#food-preview .button-rounded {
-  background: #ed4852;
-  color: white;
-  display: inline-block;
-  padding: 15px;
-  border-radius: 30px;
-  margin-bottom: 130px;
-}
-
-#food-preview .container {
+.welcomeJumbo .burgerFries {
   width: 100%;
-  max-width: 1400px;
-  position: relative;
-}
-
-#food-preview .container .left-btn,
-#food-preview .container .right-btn {
-  background: red;
-  color: white;
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  top: calc(50% - 25px);
-  display: inline-block;
-  z-index: 5;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-
-#food-preview .container .left-btn {
-  left: -35px;
-}
-
-#food-preview .container .right-btn {
-  right: -35px;
-}
-
-#food-preview .food-slider {
-  width: 100%;
-  max-width: 1400px;
-  overflow: hidden;
-  position: relative;
-  font-size: 0;
-}
-
-#food-preview .food-slider .sliding-system {
-  white-space: nowrap;
-  transform: translate3d(0%, 0, 0);
-}
-
-#food-preview .food-slider .slide {
-  width: 20%;
-  position: relative;
-  height: 500px;
-  cursor: pointer;
-  display: inline-block;
-  white-space: normal;
-}
-
-#food-preview .food-slider .slide:hover .background {
-  background: #2e9cf5;
-  transform: translate3d(0, -200px, 0);
-}
-
-#food-preview .food-slider .slide:hover .content .food-title {
-  color: white;
-}
-
-#food-preview .food-slider .slide:hover .content .food-description {
-  color: white;
-}
-
-#food-preview .food-slider .slide .background {
-  background: white;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  z-index: 1;
-  position: absolute;
-  transition: transform 0.3s ease-in-out;
-}
-
-#food-preview .food-slider .slide .content {
-  position: absolute;
-  z-index: 2;
-  padding: 20px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#food-preview .food-slider .slide .content .food-title {
-  color: #ed4852;
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 3rem;
-}
-
-#food-preview .food-slider .slide .content .food-description {
-  font-size: 0.8rem;
-  font-weight: 400;
-  line-height: 1.8;
-  margin-bottom: 3rem;
-  color: #7a8d99;
-}
-
-#food-preview .food-slider .slide img {
-  width: 95%;
-  max-width: 250px;
-}
-
-h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 3rem;
+  max-width: 800px;
 }
 
 body {
@@ -493,6 +409,10 @@ q:before {
   content: none;
 }
 
+p {
+  font-family: "Mulish", sans-serif;
+}
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -500,5 +420,631 @@ table {
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+* .container {
+  width: 90%;
+  max-width: 1100px;
+}
+
+* .sectionTitle {
+  font-size: 4rem;
+  color: #333333;
+  font-weight: 900;
+  margin-bottom: 50px;
+}
+
+* .title {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+* .subtitle {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+#appLayout {
+  display: grid;
+  width: 100%;
+  height: 100vh;
+}
+
+#appLayout .sideMenu {
+  padding: 40px;
+  height: 100vh;
+  width: 300px;
+  position: absolute;
+  background: white;
+}
+
+#appLayout .sideMenu .logo {
+  display: flex;
+  justify-content: start;
+  margin-bottom: 35px;
+}
+
+#appLayout .sideMenu img {
+  max-width: 100px;
+}
+
+#appLayout .sideMenu .menu {
+  margin-bottom: 50px;
+}
+
+#appLayout .sideMenu .menu .links li a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333333;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+  display: block;
+  transition: color 0.3s ease-in-out;
+}
+
+#appLayout .sideMenu .menu .links li a:hover {
+  color: #e01d2b;
+}
+
+#appLayout .sideMenu .socialIcons {
+  display: flex;
+}
+
+#appLayout .sideMenu .socialIcons a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #fbfbfb;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #e01d2b;
+  transition: background 0.3s ease-in-out;
+}
+
+#appLayout .sideMenu .socialIcons a:hover {
+  background: #333333;
+}
+
+#appLayout .sideMenu .location {
+  position: absolute;
+  bottom: 0;
+  padding: 0 0 15px;
+}
+
+#appLayout .sideMenu .location .address {
+  color: #d1535c;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+#appLayout .sideMenu .location .contactNumber {
+  margin-bottom: 10px;
+}
+
+#appLayout .sideMenu .location .contactNumber a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #0077ff;
+}
+
+#appLayout .sideMenu .location .operations {
+  color: #d1535c;
+}
+
+#appLayout #contentSection {
+  transform: translate3d(250px, 0, 0);
+  max-width: calc(100vw - 250px);
+  background: #ed1b2e;
+  /* Old browsers */
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ed1b2e 1%, #333333 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+#infoSection {
+  background-color: #333333;
+  color: #fbfbfb;
+}
+
+#infoSection .container {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  padding: 100px;
+}
+
+#infoSection .container .infoGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}
+
+#infoSection .container .infoGrid .iBox .paragraph {
+  padding: 10px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+#infoSection .container .infoGrid .iBox .learnMore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fbfbfb;
+  text-decoration: none;
+}
+
+#infoSection .container .infoGrid .iBox .learnMore span {
+  text-transform: uppercase;
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#infoSection .container .infoGrid .iBox .learnMore .circleRight {
+  height: 30px;
+  width: 30px;
+  /* FF3.6-15 */
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ed1b2e 1%, #333333 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#infoSection .container .infoGrid .iBox .learnMore .circleRight .fa-chevron-right {
+  color: #fbfbfb;
+}
+
+#infoSection .container .infoGrid .iBox .learnMore:hover .circleRight {
+  margin-left: 10px;
+}
+
+#happeningsSection {
+  padding: 100px;
+}
+
+#happeningsSection .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#happeningsSection .container .sectionTitle {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+#happeningsSection .container .happeningsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  z-index: 100;
+}
+
+#happeningsSection .container .happeningsGrid .happeningsBox {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 300px;
+  width: 300px;
+}
+
+#happeningsSection .container .happeningsGrid .happeningsBox img {
+  height: 100%;
+  width: 100%;
+}
+
+#foodPreview {
+  background: #f4ebeb;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#foodPreview .roundedBtn {
+  background: #ed1b2e;
+  color: #f2f2f2;
+  padding: 15px;
+  display: inline-block;
+  border-radius: 30px;
+  margin-bottom: 130px;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+#foodPreview .roundedBtn:hover {
+  background: #333333;
+}
+
+#foodPreview .container {
+  width: 100%;
+  position: relative;
+}
+
+#foodPreview .container .leftBtn,
+#foodPreview .container .rightBtn {
+  background: #e01d2b;
+  color: #f2f2f2;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: calc(50% - 25px);
+  display: inline-block;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#foodPreview .container .leftBtn:hover,
+#foodPreview .container .rightBtn:hover {
+  background: #f2f2f2;
+  border: 2px solid #e01d2b;
+  color: #e01d2b;
+}
+
+#foodPreview .container .leftBtn {
+  left: -10px;
+}
+
+#foodPreview .container .rightBtn {
+  right: -10px;
+}
+
+#foodPreview .container .foodSlider {
+  width: 100%;
+  font-size: 0;
+  max-width: 1300px;
+  overflow: hidden;
+  position: relative;
+}
+
+#foodPreview .container .foodSlider .slidingSystem {
+  white-space: nowrap;
+  transform: translate3d(0%, 0, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+#foodPreview .container .foodSlider .slide {
+  width: 20%;
+  height: 400px;
+  position: relative;
+  display: inline-block;
+  white-space: normal;
+  cursor: pointer;
+}
+
+#foodPreview .container .foodSlider .slide:hover .background {
+  background: #0685ac;
+  transform: translate3d(0, -200px, 0);
+}
+
+#foodPreview .container .foodSlider .slide:hover .content .foodTitle {
+  color: #f4ebeb;
+}
+
+#foodPreview .container .foodSlider .slide:hover .content .foodDesc {
+  color: #f4ebeb;
+}
+
+#foodPreview .container .foodSlider .slide .background {
+  background: white;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
+
+#foodPreview .container .foodSlider .slide .content {
+  position: absolute;
+  z-index: 2;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#foodPreview .container .foodSlider .slide .content .foodTitle {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: #ed1b2e;
+}
+
+#foodPreview .container .foodSlider .slide .content .foodDesc {
+  font-weight: 300;
+  line-height: 1.3;
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+}
+
+#foodPreview .container .foodSlider .slide .content img {
+  max-width: 125px;
+  width: 95%;
+}
+
+.contentBox {
+  background-color: white;
+  padding: 20px;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  #appLayout .sectionTitle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  #appLayout .sideMenu {
+    transform: translate3d(-300px, 0, 0);
+  }
+
+  #appLayout .welcomeJumbo {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #appLayout #contentSection {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    overflow-y: scroll;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #infoSection .container .infoGrid {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+
+  #infoSection .container .infoGrid .iBox .title {
+    font-size: 2rem;
+  }
+
+  #infoSection .container .infoGrid .iBox p {
+    font-size: 0.8rem;
+  }
+
+  #infoSection .container .infoGrid .iBox .learnMore span {
+    font-size: 0.9rem;
+  }
+
+  #infoSection .container .infoGrid .iBox .learnMore .circleRight {
+    height: 25px;
+    width: 25px;
+  }
+
+  #infoSection .container .infoGrid .iBox .learnMore .circleRight i {
+    font-size: 0.9rem;
+  }
+
+  #happeningsSection {
+    padding: 100px 0;
+  }
+
+  #happeningsSection .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #happeningsSection .container .sectionTitle {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  #happeningsSection .container .happeningsGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 100px;
+    z-index: 100;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox img {
+    height: 80%;
+    width: 80%;
+  }
+
+  #foodPreview {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  #foodPreview .sectionTitle {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  #foodPreview .container .foodSlider .slide {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  #appLayout .sectionTitle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  #appLayout .sideMenu {
+    transform: translate3d(-300px, 0, 0);
+  }
+
+  #appLayout .welcomeJumbo {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #appLayout #contentSection {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    overflow-y: scroll;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #infoSection .container .infoGrid {
+    grid-template-columns: 1fr;
+    row-gap: 50px;
+  }
+
+  #happeningsSection {
+    padding: 100px 0;
+  }
+
+  #happeningsSection .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #happeningsSection .container .sectionTitle {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  #happeningsSection .container .happeningsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    z-index: 100;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox img {
+    height: 100%;
+    width: 100%;
+  }
+
+  #foodPreview {
+    width: 100%;
+    overflow: hidden;
+    padding: 20px;
+  }
+
+  #foodPreview .sectionTitle {
+    margin: 50px 0;
+    text-align: center;
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+
+  #foodPreview .container .foodSlider .slide {
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  #appLayout .sectionTitle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    line-height: 1.4;
+  }
+
+  #appLayout .sideMenu {
+    transform: translate3d(-300px, 0, 0);
+  }
+
+  #appLayout .welcomeJumbo {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #appLayout #contentSection {
+    width: 100%;
+    max-width: 100vw;
+    padding: 15px;
+    transform: translate3d(0, 0, 0);
+  }
+
+  #infoSection .title {
+    font-size: 1.7rem;
+  }
+
+  #infoSection p {
+    font-size: 0.9rem;
+  }
+
+  #happeningsSection {
+    padding: 100px 0;
+  }
+
+  #happeningsSection .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  #happeningsSection .container .sectionTitle {
+    font-size: 3rem;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  #happeningsSection .container .happeningsGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    z-index: 100;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #happeningsSection .container .happeningsGrid .happeningsBox img {
+    height: 100%;
+    width: 100%;
+  }
 }
 

@@ -1,0 +1,40 @@
+#singleMenuPage {
+  padding: 50px;
+  .title {
+    margin-bottom: 2rem;
+  }
+  .item { 
+    margin-bottom: 2rem;
+    .subtitle {
+      display: flex;
+      justify-content: space-between;
+      h5, .price {
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+    }
+    .description {
+      font-size: .9rem;
+    }
+  }
+}
+
+// Small devices
+@media (min-width: 0px) and (max-width: 767px) {
+	#singleMenuPage {
+		padding: 20px;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 992px) {
+	#singleMenuPage {
+		padding: 20px;
+	}
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}

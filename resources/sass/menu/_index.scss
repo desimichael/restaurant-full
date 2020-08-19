@@ -1,0 +1,40 @@
+#menuPage {
+	padding: 50px;
+	#foodPreview {
+		padding: 0;
+		background: transparent;
+		.sectionTitle {
+			color: white;
+		}
+		.leftBtn,
+		.rightBtn {
+			background: black;
+		}
+	}
+	p {
+		font-size: 1rem;
+		line-height: 1.5;
+		font-weight: 300;
+		margin-bottom: 2rem;
+	}
+}
+
+// Small devices
+@media (min-width: 0px) and (max-width: 767px) {
+	#menuPage {
+		padding: 20px;
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) and (max-width: 992px) {
+	#menuPage {
+		padding: 20px;
+	}
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
