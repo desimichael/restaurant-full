@@ -20,7 +20,7 @@
             <div class="background"></div>
             <div class="content">
               <div class="foodTitle">
-                Appetizers
+                Apps
               </div>
               <p class="foodDesc">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum sed veritatis non iure harum distinctio doloremque ipsum asperiores laboriosam?

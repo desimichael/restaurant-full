@@ -315,6 +315,10 @@ table {
   margin-bottom: 2rem;
 }
 
+#singleMenuPage .contentBox {
+  border-radius: 0.3rem;
+}
+
 #singleMenuPage .item {
   margin-bottom: 2rem;
 }
@@ -636,9 +640,6 @@ body {
 }
 
 #happeningsSection .container .happeningsGrid .happeningsBox {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
   height: 300px;
   width: 300px;
 }
