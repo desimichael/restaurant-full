@@ -13,30 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// HOME PAGE 
-Route::get('/', function () {
-    return view('home');
-});
+// STATIC PAGES
+Route::get('/', 'StaticPagesController@home');
+Route::get('/menu', 'StaticPagesController@menu');
+Route::get('/events', 'StaticPagesController@events');
+Route::get('/waitlist', 'StaticPagesController@waitlist');
+Route::get('/about', 'StaticPagesController@about');
+Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
+// Route::get('/contact', 'StaticPagesController@contact');
 
 // ADMIN DASHBOARD
-Route::get('/admin', function () {
-    return view('admin/dashboard');
-});
+Route::get('/admin', 'admin\AdminController@dashboard');
 
 // ADMIN FOOD CATEGORIES
-Route::get('/admin/food-categories', function () {
-    return view('admin/food-categories/all');
-});
-Route::get('/admin/food-categories/create', function () {
-    return view('admin/food-categories/create');
-});
-Route::get('/admin/food-categories/{id}/edit', function () {
-    return view('admin/food-categories/edit');
-});
-// Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
-// Route::get('/admin/food-categories', 'admin\FoodCategoriesController@create');
-// Route::get('/admin/food-categories', 'admin\FoodCategoriesController@edit');
-
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
+Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
 // ADMIN AUTHENTICATION
 Route::get('/admin/register', function () {
     return view('admin/register');
@@ -44,15 +36,3 @@ Route::get('/admin/register', function () {
 Route::get('/admin/login', function () {
     return view('admin/login');
 });
-
-// STATIC PAGES
-Route::get('/menu', function () {
-    return view('menu/index');
-});
-Route::get('/menu/{slug}', function () {
-    return view('menu/single-menu');
-});
-Route::get('/about', 'StaticPagesController@about');
-Route::get('/contact', 'StaticPagesController@contact');
-Route::get('/events', 'StaticPagesController@events');
-Route::get('/waitlist', 'StaticPagesController@waitlist');
