@@ -13,11 +13,11 @@ class StaticPagesController extends Controller
     public function menu() {
         return view('menu/index');
     }
-    public function events() {
-        return view('pages/events');
+    public function offers() {
+        return view('pages/offers');
     }
-    public function waitlist() {
-        return view('pages/waitlist');
+    public function reservations() {
+        return view('pages/reservations');
     }
     public function about() {
         return view('pages/about');

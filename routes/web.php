@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 // STATIC PAGES
 Route::get('/', 'StaticPagesController@home');
 Route::get('/menu', 'StaticPagesController@menu');
-Route::get('/events', 'StaticPagesController@events');
-Route::get('/waitlist', 'StaticPagesController@waitlist');
+Route::get('/offers', 'StaticPagesController@offers');
+Route::get('/reservations', 'StaticPagesController@reservations');
 Route::get('/about', 'StaticPagesController@about');
 Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
 // Route::get('/contact', 'StaticPagesController@contact');
@@ -29,6 +29,10 @@ Route::get('/admin', 'admin\AdminController@dashboard');
 Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index');
 Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create');
 Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit');
+
+// CUSTOMERS
+Route::get('/admin/member-offers', 'admin\CustomersController@allMemberOffers');
+Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
 
 // FOOD ITEMS 
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');

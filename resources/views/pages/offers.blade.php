@@ -4,11 +4,11 @@
 
 @section('content')
 
-<div id="eventsPage">
+<div id="offersPage">
   <div class="contentBox">
     <div class="row">
       <div class="col-md-8 offset-md-2">
-        <div class="title">Get Events and Offers!!</div>    
+        <div class="title">Get Offers!!</div>    
           <form>
             <div class="row">
               <div class="col-md-6">

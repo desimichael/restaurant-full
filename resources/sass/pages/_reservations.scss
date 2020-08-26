@@ -1,5 +1,5 @@
-#eventsPage {
-	padding: 100px;
+#reservationsPage {
+	padding: 50px;
 	.title {
 		text-align: start;
 	}
@@ -32,17 +32,17 @@
 
 // Small devices
 @media (min-width: 0px) and (max-width: 767px) {
-	#eventsPage {
+	#waitlistPage {
 		padding: 50px;
 		.title {
-			font-size: 1.3rem;
+			font-size: 1.6rem;
 		}
 	}
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) and (max-width: 992px) {
-	#eventsPage {
+	#waitlistPage {
 		padding: 50px;
 		.title {
 			font-size: 1.6rem;
