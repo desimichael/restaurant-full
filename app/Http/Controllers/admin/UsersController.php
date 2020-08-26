@@ -5,15 +5,15 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class FoodItemsController extends Controller
+class UsersController extends Controller
 {
     public function index() {
-        return view('admin/food-items/all');
+        return view('admin/users/all');
     }
     public function create() {
-        return view('admin/food-items/create');
+        return view('admin/users/create');
     }
     public function edit() {
-        return view('admin/food-items/edit');
+        return view('admin/users/edit');
     }
 }
