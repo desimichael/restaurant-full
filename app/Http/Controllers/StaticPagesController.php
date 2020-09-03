@@ -8,7 +8,7 @@ class StaticPagesController extends Controller
 {
 
     public function home() {
-        return view('home');
+        return view('landing');
     }
     public function menu() {
         return view('menu/index');
@@ -22,9 +22,9 @@ class StaticPagesController extends Controller
     public function about() {
         return view('pages/about');
     }
-    // public function contact() {
-    //     return view('pages/contact');
-    // }
+    public function contact() {
+        return view('pages/contact');
+    }
     public function singleMenu() {
         return view('menu/single-menu');
     }
