@@ -20,7 +20,7 @@ Route::get('/offers', 'StaticPagesController@offers');
 Route::get('/reservations', 'StaticPagesController@reservations');
 Route::get('/about', 'StaticPagesController@about');
 Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
-// Route::get('/contact', 'StaticPagesController@contact');
+Route::get('/contact', 'StaticPagesController@contact');
 
 // ADMIN DASHBOARD
 Route::get('/admin', 'admin\AdminController@dashboard');
@@ -54,6 +54,18 @@ Route::get('/admin/register', function () {
 Route::get('/admin/login', function () {
     return view('admin/login');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
