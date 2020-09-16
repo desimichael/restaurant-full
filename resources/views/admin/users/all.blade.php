@@ -48,24 +48,27 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                @foreach ($users as $user)
+                                  <tr>
                                     <th scope="row">1</th>
-                                    <td>John Jacob</td>
-                                    <td>jjcob@gmail.com</td>
-                                    <td>8/24/20</td>
+                                    <td>{{$user->fname}}</td>
+                                    <td>{{$user->email}}</td>
+                                    <td>{{date('m/d/Y',strtotime($user->updated_at))}}</td>
                                     <td>
-                                        <a href="/admin/users/1/edit">
+                                        <a href="/admin/users/{{$user->id}}/edit">
                                             <i class="far fa-edit"></i>
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="/admin/users/1/delete" onclick="if (! confirm('Are you sure you want to delete category?')) { return false; }">
+                                        <a href="/admin/users/{{$user->id}}/delete" onclick="if (! confirm('Are you sure you want to delete category?')) { return false; }">
                                             <i class="far fa-trash-alt"></i>
                                         </a>
                                     </td>
-                                </tr>
+                                </tr> 
+                                @endforeach
                             </tbody>
                         </table>
+                        {{ $users->links() }}
                     </div>
                 </div>
             </div>
