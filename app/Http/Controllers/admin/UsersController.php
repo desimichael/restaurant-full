@@ -71,13 +71,6 @@ class UsersController extends Controller
         $user->roles()->sync([request('role_id')]);
 
         return redirect('/admin/users');
-        // $user = User::find($id);
-
-        // $roles = Role::All();
-        // return view('admin/users/edit', [
-        //     'user' => $user,
-        //     'roles' => $roles
-        // ]);
     }
 
     public function delete($id) {

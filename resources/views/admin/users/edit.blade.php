@@ -37,7 +37,7 @@
                     <div class="card">
                         <h5 class="card-header">Edit User</h5>
                         <div class="card-body">
-                              <form method="POST" action="/admin/users/{{$user->id}}">
+                            <form method="POST" action="/admin/users/{{$user->id}}">
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">
