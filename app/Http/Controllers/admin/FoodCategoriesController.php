@@ -28,7 +28,12 @@ class FoodCategoriesController extends Controller
     }
 
     public function store() {
-        // return request()->all();
+        request()->validate([
+            'title' => ['required', 'string', 'max:255'],
+            'description' => ['required', 'string'],
+            'image_url' => ['required', 'string']
+            ]);
+            
         $category = new FoodCategory();
         $category->title = request('title');
         $category->description = request('description');
@@ -54,11 +59,11 @@ class FoodCategoriesController extends Controller
             'image_url' => ['required', 'string']
             ]);
 
-        $user = FoodCategory::find($id);
-        $user->title = request('title');
-        $user->description = request('description');
-        $user->image_url = request('image_url');
-        $user->save();
+        $category = FoodCategory::find($id);
+        $category->title = request('title');
+        $category->description = request('description');
+        $category->image_url = request('image_url');
+        $category->save();
 
         return redirect('/admin/food-categories');
     }
