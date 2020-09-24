@@ -37,7 +37,7 @@
                     <div class="card">
                         <h5 class="card-header">Edit category</h5>
                         <div class="card-body">
-                           <form method="POST" action="/admin/food-categories/{{$category->id}}">
+                           <form method="POST" action="/admin/categories/{{$category->id}}">
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">

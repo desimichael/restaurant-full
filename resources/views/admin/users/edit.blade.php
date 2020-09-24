@@ -87,7 +87,7 @@
                                     class="form-control" id="inputRole">
                                         @foreach ($roles as $role)
                                             <option value="{{$role->id}}"
-                                            @if ($role->title == 'Employee')
+                                            @if ($category->id == $item->$category_id)
                                                 selected
                                             @endif 
                                             >{{$role->title}}</option>

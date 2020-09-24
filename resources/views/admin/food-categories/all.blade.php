@@ -58,16 +58,12 @@
                                         </a>
                                     </td>
                                     <td>
-                                        {{-- <a href="/admin/users/{{$category->id}}/delete" onclick="if (! confirm('Are you sure you want to delete category?')) { return false; }">
-                                            <i class="far fa-trash-alt"></i>
-                                        </a> --}}
-
                                         <a href="#" 
                                             onclick="event.preventDefault();
-                                            document.getElementById('delete-user-{{$category->id}}').submit();">
+                                            document.getElementById('delete-category-{{$category->id}}').submit();">
                                             <i class="far fa-trash-alt"></i>
                                         </a>
-                                        <form id="delete-user-{{$category->id}}" action="/admin/food-categories/{{$category->id}}/delete" method="POST" class="d-none">
+                                        <form id="delete-category-{{$category->id}}" action="/admin/food-categories/{{$category->id}}/delete" method="POST" class="d-none">
                                             @method('DELETE')
                                             @csrf
                                         </form>

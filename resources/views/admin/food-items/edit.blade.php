@@ -37,12 +37,12 @@
                     <div class="card">
                         <h5 class="card-header">Edit a new Item</h5>
                         <div class="card-body">
-                             <form method="POST" action="/admin/food-items">
+                            <form method="POST" action="/admin/food-items/{{$item->id}}">
                                 @csrf
                                 @method('PUT')
                                 <div class="form-group">
                                     <label for="inputtitle">Title</label>
-                                     <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title') }}" required autocomplete="title" autofocus placeholder="Item title here...">
+                                     <input id="inputtitle" type="text" class="form-control form-control-lg @error('title') is-invalid @enderror" name="title" value="{{ old('title', $item->title) }}" required autocomplete="title" autofocus placeholder="Item title here...">
                                     @error('title')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -51,7 +51,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputprice">Price</label>
-                                     <input id="inputprice" type="text" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" value="{{ old('price') }}" required autocomplete="price" autofocus placeholder="Item price here...">
+                                     <input id="inputprice" type="text" class="form-control form-control-lg @error('price') is-invalid @enderror" name="price" value="{{ old('price', $item->price) }}" required autocomplete="price" autofocus placeholder="Item price here...">
                                     @error('price')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputimageurl">Image URL</label>
-                                    <input id="inputimageurl" type="text" class="form-control form-control-lg  @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url') }}"autocomplete="title" placeholder="Add URL to the item image">
+                                    <input id="inputimageurl" type="text" class="form-control form-control-lg  @error('image_url') is-invalid @enderror" name="image_url" value="{{ old('image_url', $item->image_url) }}"autocomplete="title" placeholder="Add URL to the item image">
                                     @error('image_url')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="inputdescription">Description</label>
-                                    <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" required autofocus placeholder="Write description here...">{{ old('description') }}</textarea>
+                                    <textarea id="inputdescription" type="text" class="form-control form-control-lg @error('description') is-invalid @enderror" name="description" autofocus placeholder="Write description here...">{{ old('description', $item->description) }}</textarea>
 
                                     @error('description')
                                         <span class="invalid-feedback" role="alert">
