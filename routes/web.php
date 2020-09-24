@@ -40,7 +40,10 @@ Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
 // FOOD ITEMS 
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
+Route::post('/admin/food-items', 'admin\FoodItemsController@store');
 Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
+Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
 
 // ADMIN USERS 

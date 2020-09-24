@@ -80,10 +80,10 @@
                                      <input id="inputPassword" type="password" class="form-control form-control-lg" name="password_confirmation" required autocomplete="new-password" placeholder="Confirm Password">
                                 </div>
                                 <div class="form-group">
-                                    <label for="inputRole">Role</label>
+                                    <label for="inputrole">Role</label>
                                     <select 
                                     name="role_id"
-                                    class="form-control" id="inputRole">
+                                    class="form-control" id="inputrole">
                                         @foreach ($roles as $role)
                                             <option value="{{$role->id}}"
                                             @if ($role->title == 'Admin')

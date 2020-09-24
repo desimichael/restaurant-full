@@ -33,7 +33,7 @@ class FoodCategoriesController extends Controller
             'description' => ['required', 'string'],
             'image_url' => ['required', 'string']
             ]);
-            
+
         $category = new FoodCategory();
         $category->title = request('title');
         $category->description = request('description');
@@ -56,7 +56,7 @@ class FoodCategoriesController extends Controller
         request()->validate([
             'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
-            'image_url' => ['required', 'string']
+            'image_url' => ['string']
             ]);
 
         $category = FoodCategory::find($id);
@@ -69,10 +69,9 @@ class FoodCategoriesController extends Controller
     }
 
     public function delete($id) {
-        $user = FoodCategory::find($id);
-        $user->delete();
+        $category = FoodCategory::find($id);
+        $category->delete();
 
         return redirect('/admin/food-categories');
     }
-    
 }
