@@ -33,8 +33,11 @@ Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@e
 Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update');
 Route::delete('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete');
 
-// CUSTOMERS
-Route::get('/admin/member-offers', 'admin\CustomersController@allMemberOffers');
+// ADMIN CUSTOMERS
+// ADMIN MEMBERS
+Route::get('/admin/members', 'admin\MemberController@index');
+
+// ADMIN RESERVATIONS
 Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
 
 // FOOD ITEMS 
