@@ -232,6 +232,13 @@ table {
   margin-bottom: 2rem;
 }
 
+#offersPage .thank-you .title,
+#offersPage .thank-you p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #offersPage form .form-group label {
   font-weight: 700;
   color: #000;
