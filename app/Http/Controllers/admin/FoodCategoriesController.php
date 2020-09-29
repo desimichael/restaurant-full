@@ -8,8 +8,6 @@ use App\FoodCategory;
 
 class FoodCategoriesController extends Controller
 {
-
-
     public function __construct()
     {
         $this->middleware('auth');

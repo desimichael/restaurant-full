@@ -13,10 +13,10 @@ class MemberSeeder extends Seeder
     public function run()
     {
         DB::table('members')->insert([
-            'fname' => 'jenny',
-            'lname' => 'jane',
-            'email' => 'jj@gmail.com',
-            'phone_number' => '4354456762',
+            'fname' => 'justin',
+            'lname' => 'james',
+            'email' => 'jj1@gmail.com',
+            'phone_number' => '5557678898',
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ]);

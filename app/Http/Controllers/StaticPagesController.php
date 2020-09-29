@@ -23,7 +23,7 @@ class StaticPagesController extends Controller
             'lname' => ['required', 'string'],
             'email' => ['required', 'string'],
             'phone_number' => ['required', 'string']
-            ]);
+        ]);
 
         $member = new Member();
         $member->fname = request('fname');
@@ -32,21 +32,25 @@ class StaticPagesController extends Controller
         $member->phone_number = request('phone_number');
         $member->save();
 
-
         return redirect('/offers/thank-you');
     }
+
     public function offersThankYou() {
         return view('pages/thank-you');
     }
+
     public function reservations() {
         return view('pages/reservations');
     }
+
     public function about() {
         return view('pages/about');
     }
+
     public function contact() {
         return view('pages/contact');
     }
+    
     public function singleMenu() {
         return view('menu/single-menu');
     }
