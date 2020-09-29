@@ -19,11 +19,11 @@
               <input type="text" class="form-control" name="lname" id="lastNameInput" placeholder="Jacob">
             </div>
             <div class="form-group">
-              <label for="emailInput">Email address</label>
-              <input type="email" class="form-control" name="email" id="emailInput" placeholder="Email">
+              <label for="emailInput">Email</label>
+              <input type="email" class="form-control" name="email" id="emailInput" placeholder="jj@gmail.com">
             </div>
             <div class="form-group">
-              <label for="phoneInput">Phone number</label>
+              <label for="phoneInput">Phone</label>
               <input type="phone" class="form-control" name="phone" id="phoneInput" placeholder="404-588-4577">
             </div>
             <div class="form-group">
