@@ -26,6 +26,16 @@ Route::get('/offers', 'StaticPagesController@offers');
 Route::post('/offers', 'StaticPagesController@registerMember');
 Route::get('/offers/thank-you', 'StaticPagesController@thankYou');
 
+
+// FOOD ITEMS 
+Route::get('/admin/food-items', 'admin\FoodItemsController@index');
+Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
+Route::post('/admin/food-items', 'admin\FoodItemsController@store');
+Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
+Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
+Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
+
+
 // ADMIN DASHBOARD
 Route::get('/admin', 'admin\AdminController@dashboard');
 
@@ -46,14 +56,15 @@ Route::delete('/admin/members/{id}/delete', 'admin\MemberController@delete');
 Route::get('/admin/reservations', 'admin\ReservationController@index');
 Route::delete('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
 
-// FOOD ITEMS 
-Route::get('/admin/food-items', 'admin\FoodItemsController@index');
-Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
-Route::post('/admin/food-items', 'admin\FoodItemsController@store');
-Route::get('/admin/food-items/{id}/edit', 'admin\FoodItemsController@edit');
-Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
-Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
+// ADMIN SETTINGS
+
+Route::get('/admin/settings/general', 'admin\SettingsController@general');
+Route::post('/admin/settings/general', 'admin\SettingsController@saveGeneral');
+Route::get('/admin/settings/seo', 'admin\SettingsController@seo');
+Route::post('/admin/settings/seo', 'admin\SettingsController@saveSeo');
+Route::get('/admin/settings/social', 'admin\SettingsController@social');
+Route::post('/admin/settings/social', 'admin\SettingsController@saveSocial');
 
 // ADMIN USERS 
 Route::get('/admin/users', 'admin\UsersController@index');
@@ -72,6 +83,13 @@ Route::get('/admin/register', function () {
 Route::get('/admin/login', function () {
     return view('admin/login');
 });
+
+
+
+
+
+
+
 
 Auth::routes();
 
