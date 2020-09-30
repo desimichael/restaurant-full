@@ -16,13 +16,15 @@ use Illuminate\Support\Facades\Route;
 // STATIC PAGES
 Route::get('/', 'StaticPagesController@home');
 Route::get('/menu', 'StaticPagesController@menu');
+Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
+Route::get('/reservations', 'StaticPagesController@reservations');
+Route::post('/reservations', 'StaticPagesController@saveReservation');
+Route::get('/reservations/thank-you', 'StaticPagesController@thankYou');
+Route::get('/about', 'StaticPagesController@about');
+Route::get('/contact', 'StaticPagesController@contact');
 Route::get('/offers', 'StaticPagesController@offers');
 Route::post('/offers', 'StaticPagesController@registerMember');
-Route::get('/offers/thank-you', 'StaticPagesController@offersThankYou');
-Route::get('/reservations', 'StaticPagesController@reservations');
-Route::get('/about', 'StaticPagesController@about');
-Route::get('/menu/{slug}', 'StaticPagesController@singleMenu');
-Route::get('/contact', 'StaticPagesController@contact');
+Route::get('/offers/thank-you', 'StaticPagesController@thankYou');
 
 // ADMIN DASHBOARD
 Route::get('/admin', 'admin\AdminController@dashboard');
