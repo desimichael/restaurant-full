@@ -43,7 +43,8 @@ Route::get('/admin/members', 'admin\MemberController@index');
 Route::delete('/admin/members/{id}/delete', 'admin\MemberController@delete');
 
 // ADMIN RESERVATIONS
-Route::get('/admin/reservations', 'admin\CustomersController@allReservations');
+Route::get('/admin/reservations', 'admin\ReservationController@index');
+Route::delete('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
 
 // FOOD ITEMS 
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');
