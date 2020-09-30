@@ -57,14 +57,13 @@ Route::get('/admin/reservations', 'admin\ReservationController@index');
 Route::delete('/admin/reservations/{id}/delete', 'admin\ReservationController@delete');
 
 
-// ADMIN SETTINGS
-
-Route::get('/admin/settings/general', 'admin\SettingsController@general');
-Route::post('/admin/settings/general', 'admin\SettingsController@saveGeneral');
-Route::get('/admin/settings/seo', 'admin\SettingsController@seo');
-Route::post('/admin/settings/seo', 'admin\SettingsController@saveSeo');
-Route::get('/admin/settings/social', 'admin\SettingsController@social');
-Route::post('/admin/settings/social', 'admin\SettingsController@saveSocial');
+// ADMIN Settings
+Route::get('/admin/settings/general', 'admin\SettingController@general');
+Route::post('/admin/settings/general', 'admin\SettingController@saveGeneral');
+Route::get('/admin/settings/seo', 'admin\SettingController@seo');
+Route::post('/admin/settings/seo', 'admin\SettingController@saveSeo');
+Route::get('/admin/settings/social', 'admin\SettingController@social');
+Route::post('/admin/settings/social', 'admin\SettingController@saveSocial');
 
 // ADMIN USERS 
 Route::get('/admin/users', 'admin\UsersController@index');
