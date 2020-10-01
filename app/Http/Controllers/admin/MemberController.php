@@ -24,6 +24,6 @@ class MemberController extends Controller
         $member = Member::find($id);
         $member->delete();
 
-        return redirect('/admin/members');
+        return redirect('/admin/members/all');
     }
 }

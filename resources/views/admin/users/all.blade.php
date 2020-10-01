@@ -60,10 +60,6 @@
                                         </a>
                                     </td>
                                     <td>
-                                        {{-- <a href="/admin/users/{{$user->id}}/delete" onclick="if (! confirm('Are you sure you want to delete category?')) { return false; }">
-                                            <i class="far fa-trash-alt"></i>
-                                        </a> --}}
-
                                         <a href="#" 
                                             onclick="event.preventDefault();
                                             document.getElementById('delete-user-{{$user->id}}').submit();">
