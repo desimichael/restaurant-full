@@ -1,7 +1,7 @@
 
             <div class="sideMenu">
               <a href="/" class="logo">
-                <img src="/img/tonys_logo.png" alt="Tonys">
+                <img src="{{$settings["general"]->logo_image_url}}" alt="Tonys">
               </a>
               <div class="menu">
                 <!-- <div class="menuTitle">
@@ -26,17 +26,24 @@
                 </ul>
               </div> 
               <div class="socialIcons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="{{$settings["social"]->facebook_url}}" target="new"><i class="fab fa-facebook-f"></i></a>
+                <a href="{{$settings["social"]->twitter_url}}" target="new"><i class="fab fa-twitter"></i></a>
+                <a href="{{$settings["social"]->instagram_url}}" target="new"><i class="fab fa-instagram"></i></a>
               </div>  
               <div class="location">
                 <div class="address">
-                  8610 Roswell Road <br>
-                  Sandy Springs, GA 30350 
+                  {{$settings["general"]->address_1}}
+                  {{$settings["general"]->address_2}}
+                  <br>
+                  {{$settings["general"]->city}},
+                   <br>
+                  {{$settings["general"]->state}}  
+                  {{$settings["general"]->zipcode}} 
                 </div>
                 <div class="contactNumber">
-                  <a href="tel:770-552-2233">770-552-2233</a>
+                  <a href="tel:{{$settings["general"]->phone_number}}">
+                    {{$settings["general"]->phone_number}}
+                  </a>
                 </div>
                 <div class="operations">
                   Everyday 12pm - 2:30am

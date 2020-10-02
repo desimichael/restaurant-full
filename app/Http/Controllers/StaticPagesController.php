@@ -10,6 +10,7 @@ class StaticPagesController extends Controller
 {
 
     public function home() {
+
         return view('home');
     }
     public function menu() {
@@ -77,3 +78,5 @@ class StaticPagesController extends Controller
         return view('menu/single-menu');
     }
 }
+
+
