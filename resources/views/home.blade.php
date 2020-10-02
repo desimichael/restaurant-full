@@ -1,6 +1,8 @@
 @extends('layouts.landing')
 
-
+@section('title')
+{{$settings["general"]->site_title}} The Best Food and Entertainment
+@endsection
 
 @section('content')
 <section id="infoSection">

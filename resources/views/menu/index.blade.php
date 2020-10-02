@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-
+@section('title')
+Menu - {{$settings["general"]->site_title}}
+@endsection
 
 @section('content')
 

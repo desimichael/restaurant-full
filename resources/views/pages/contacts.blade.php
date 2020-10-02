@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-
+@section('title')
+Contacts - {{$settings["general"]->site_title}}
+@endsection
 
 @section('content')
   <div class="">

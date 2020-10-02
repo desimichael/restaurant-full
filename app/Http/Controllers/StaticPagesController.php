@@ -74,8 +74,10 @@ class StaticPagesController extends Controller
         return view('pages/contact');
     }
     
-    public function singleMenu() {
-        return view('menu/single-menu');
+    public function singleMenu($slug) {
+        return view('menu/single-menu', [
+            "foodItem" => ucfirst($slug)
+        ]);
     }
 }
 
