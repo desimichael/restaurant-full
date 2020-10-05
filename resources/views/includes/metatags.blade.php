@@ -14,7 +14,7 @@
 {{-- <meta property="og:url" content="https://codingphase.com/"> --}}
 <meta property="og:site_name" content="{{$settings["general"]->site_title}}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{$settings["general"]->site_title}}">
+<meta name="twitter:title" content="@yield('title')">
 <meta name="twitter:description"
     content="{{$settings["seo"]->description}}">
 <!-- CSRF Token -->
