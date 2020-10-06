@@ -20,6 +20,7 @@ class Role
         $user = Auth::user();
         foreach($roles as $role) {
             $ro = Ro::where('title', $role)->first();
+            
             if($user->roles->contains($ro)) {
                 return $next($request);
             } else {
