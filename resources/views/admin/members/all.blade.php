@@ -32,7 +32,7 @@
             <!-- ============================================================== -->
             <!-- basic table -->
             <!-- ============================================================== -->
-            <div class="col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12">
+            <div class="col-xl-12 col-lg-9 col-md-12 col-sm-12 col-12">
                 <div class="card">
                     <h5 class="card-header">All Members</h5>
                     <div class="card-body">

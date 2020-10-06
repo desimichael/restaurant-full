@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
+use Faker\Factory as Faker;
 
 class MemberSeeder extends Seeder
 {
@@ -12,13 +13,16 @@ class MemberSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('members')->insert([
-            'fname' => 'Jenna',
-            'email' => 'jw@gmail.com',
-            'lname' => 'Wolf',
-            'phone_number' => '1234345678',
-            'updated_at' => Carbon::now(),
-            'created_at' => Carbon::now()
-        ]);
+        $faker = Faker::create();
+        foreach(range(1,100) as $index) {
+            DB::table('members')->insert([
+                'fname' => $faker->firstName,
+                'email' => $faker->email,
+                'lname' => $faker->lastName,
+                'phone_number' => $faker->phoneNumber,
+                'updated_at' => $faker->dateTimeThisMonth,
+                'created_at' => $faker->dateTimeThisMonth
+            ]);
+        }
     }
 }
