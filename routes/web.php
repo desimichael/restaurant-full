@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\GeneralSetting;
 use App\SeoSetting;
@@ -30,7 +29,7 @@ Route::post('/offers', 'StaticPagesController@registerMember');
 Route::get('/offers/thank-you', 'StaticPagesController@thankYou');
 
 
-// FOOD ITEMS 
+// ADMIN FOOD ITEMS 
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');
 Route::get('/admin/food-items/create', 'admin\FoodItemsController@create');
 Route::post('/admin/food-items', 'admin\FoodItemsController@store');
@@ -97,7 +96,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-View::composer(['home', 'pages/about', 'pages/contacts', 'pages/offers', 'pages/reservations', 'thank-you', 'menu/index', 'menu/single-menu'], function ($view) {
+View::composer(['home', 'pages/about', 'pages/contact', 'pages/offers', 'pages/reservations', 'thank-you', 'menu/index', 'menu/single-menu'], function ($view) {
 
     $generalSettings = GeneralSetting::find(1);
     $socialSettings = SocialSetting::find(1);

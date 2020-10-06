@@ -40,7 +40,7 @@
                   {{$settings["general"]->state}}  
                   {{$settings["general"]->zipcode}} 
                 </div>
-                <div class="contactNumber">
+                <div class="phoneNumber">
                   <a href="tel:{{$settings["general"]->phone_number}}">
                     {{$settings["general"]->phone_number}}
                   </a>

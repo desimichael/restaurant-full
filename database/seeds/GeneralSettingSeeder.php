@@ -16,7 +16,7 @@ class GeneralSettingSeeder extends Seeder
             'site_title' => 'Tonys',
             'logo_image_url' => '/img/tonys_logo.png',
             'address_1' => '8610 Roswell Road',
-            'address_2' => '8610 Roswell Road',
+            'address_2' => '',
             'city' => 'Sandy Springs',
             'state' => ' Georgia',
             'zipcode' => '30350',

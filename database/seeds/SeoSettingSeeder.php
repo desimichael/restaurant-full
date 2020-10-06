@@ -14,7 +14,7 @@ class SeoSettingSeeder extends Seeder
     {
         DB::table('seo_settings')->insert([
             'description' => "Is franchised and adds value to any entrepreneur striving to break into the leisure and entertainment industry.",
-            'keywords' => "Burgers, Local Burgers, Billiards, Sports, Hookahs",
+            'keywords' => "Burgers, Local Burgers, Billiards, Sports, Hookahs, Pool",
             
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()

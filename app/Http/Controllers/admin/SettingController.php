@@ -32,7 +32,7 @@ class SettingController extends Controller
             'city' => ['string'],
             'state' => ['string'],
             'zipcode' => ['string'],
-            'phone_number' => ['string'],
+            'phone_number' => ['string']
             ]);
         $general_setting = GeneralSetting::find($id);
         $general_setting->site_title = request('site_title');

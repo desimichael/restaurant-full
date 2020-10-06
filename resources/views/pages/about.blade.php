@@ -4,6 +4,10 @@
 About - {{$settings["general"]->site_title}}
 @endsection
 
+@section('description')
+Is franchised and adds value to any entrepreneur striving to break into the leisure and entertainment industry.
+@endsection
+
 @section('content')
 
 <div id="aboutPage">

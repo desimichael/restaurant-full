@@ -3,7 +3,7 @@
 
 <title>@yield('title')</title>
 <meta name="description"
-    content="{{$settings["seo"]->description}}">
+content="{{$settings["seo"]->description}}">
 <meta name="robots" content="follow,index,max-snippet:-1,max-video-preview:-1,max-image-preview:large">
 {{-- <link rel="canonical" href="https://codingphase.com/"> --}}
 <meta property="og:locale" content="en_US">
