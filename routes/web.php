@@ -28,6 +28,18 @@ Route::get('/offers', 'StaticPagesController@offers');
 Route::post('/offers', 'StaticPagesController@registerMember');
 Route::get('/offers/thank-you', 'StaticPagesController@thankYou');
 
+// ADMIN DASHBOARD
+Route::get('/admin', 'admin\AdminController@dashboard');
+Route::get('/admin/estimated-revenue-daily', 'admin\AdminController@DailyRevenueLast30');
+
+// ADMIN FOOD CATEGORIES
+Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index')->middleware('role:Admin');
+Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create')->middleware('role:Admin');
+Route::post('/admin/food-categories', 'admin\FoodCategoriesController@store')->middleware('role:Admin');
+Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit')->middleware('role:Admin');
+Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update')->middleware('role:Admin');
+Route::delete('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete')->middleware('role:Admin');
+
 
 // ADMIN FOOD ITEMS 
 Route::get('/admin/food-items', 'admin\FoodItemsController@index');
@@ -38,16 +50,7 @@ Route::put('/admin/food-items/{id}', 'admin\FoodItemsController@update');
 Route::delete('/admin/food-items/{id}/delete', 'admin\FoodItemsController@delete');
 
 
-// ADMIN DASHBOARD
-Route::get('/admin', 'admin\AdminController@dashboard');
 
-// ADMIN FOOD CATEGORIES
-Route::get('/admin/food-categories', 'admin\FoodCategoriesController@index')->middleware('role:Admin');
-Route::get('/admin/food-categories/create', 'admin\FoodCategoriesController@create')->middleware('role:Admin');
-Route::post('/admin/food-categories', 'admin\FoodCategoriesController@store')->middleware('role:Admin');
-Route::get('/admin/food-categories/{id}/edit', 'admin\FoodCategoriesController@edit')->middleware('role:Admin');
-Route::put('/admin/food-categories/{id}', 'admin\FoodCategoriesController@update')->middleware('role:Admin');
-Route::delete('/admin/food-categories/{id}/delete', 'admin\FoodCategoriesController@delete')->middleware('role:Admin');
 
 // ADMIN CUSTOMERS
 // ADMIN MEMBERS
