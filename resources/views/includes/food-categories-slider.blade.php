@@ -1,21 +1,36 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        @include('includes.metatags')
-    </head>
-    <body>
-        <section id="appLayout">
-            @include('includes.side-menu')
-            <section id="contentSection"> 
-            @if (session('status'))
-                <div class="alert alert-success" role="alert">
-                    {{ session('status') }}
-                </div>
-            @endif
-            @yield('content')
-            </section>
-        </section>
-        <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+ <section id="foodPreview">
+    <h1 class="sectionTitle">Sports and Great Eats!!</h1>
+    <div class="container"> 
+      <div class="leftBtn">
+        <i class="fas fa-chevron-left" aria-hidden="true"></i>
+      </div>
+      <div class="rightBtn">
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </div>  
+      <div class="foodSlider">
+        <div class="slidingSystem">
+        @foreach ($categories as $category)  
+          <a href="/menu/{{$category->title}}" class="slide">
+            <div class="background"></div>
+            <div class="content">
+              <div class="foodTitle">
+                {{$category->title}}
+              </div>
+              <p class="foodDesc">
+                {{$category->description}}
+              </p>
+              <div class="foodImg">
+                <img src="{{$category->image_url}}">
+              </div>
+            </div>     
+          </a>  
+        @endforeach
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
 
   <script> 
     let slides = $('.slidingSystem a.slide').length;
@@ -80,5 +95,3 @@
         tabletSlider(b);
         a.addListener(tabletSlider);
   </script>
-    </body>
-</html>
