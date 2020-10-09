@@ -12,80 +12,23 @@
       <div class="contentBox">
         <div class="col-md-12">
           <div class="title">
-            Burgers
+            {{$foodItem}}
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-            <div class="item">
-              <div class="subtitle">   
-                <h5>Bacon Burger</h5>
-                <span class="price">$10</span>
-              </div>
-              <div class="description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, natus.
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="item">
-              <div class="subtitle">   
-                <h5>Bacon Burger</h5>
-                <span class="price">$10</span>
-              </div>
-              <div class="description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, natus.
+          @foreach ($foodItems as $item)
+            <div class="col-md-6">
+              <div class="item">
+                <div class="subtitle">   
+                  <h5>{{$item->title}}</h5>
+                  <span class="price">{{$item->price}}</span>
+                </div>
+                <div class="description">
+                 {{$item->description}}
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="item">
-              <div class="subtitle">   
-                <h5>Bacon Burger</h5>
-                <span class="price">$10</span>
-              </div>
-              <div class="description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, natus.
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="item">
-              <div class="subtitle">   
-                <h5>Bacon Burger</h5>
-                <span class="price">$10</span>
-              </div>
-              <div class="description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, natus.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="item">
-              <div class="subtitle">   
-                <h5>Bacon Burger</h5>
-                <span class="price">$10</span>
-              </div>
-              <div class="description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, natus.
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="item">
-              <div class="subtitle">   
-                <h5>Bacon Burger</h5>
-                <span class="price">$10</span>
-              </div>
-              <div class="description">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, natus.
-              </div>
-            </div>
-          </div>
+          @endforeach
         </div>
       </div>
     </div>

@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Member;
 use App\Reservation;
+use App\FoodCategory;
+use App\FoodItem;
 
 class StaticPagesController extends Controller
 {
@@ -15,12 +17,20 @@ class StaticPagesController extends Controller
     }
     
     public function menu() {
-        return view('menu/index');
+        $categories = FoodCategory::all();
+
+        return view('menu/all-categories', [
+            'categories' => $categories
+        ]);
     }
 
     public function singleMenu($slug) {
+        $foodCategory = FoodCategory::where('title', '=', $slug)->first();
+        $foodItems = FoodItem::where('category_id', '=', $foodCategory->id)->get();
+
         return view('menu/single-menu', [
-            "foodItem" => ucfirst($slug)
+            "foodItem" => ucfirst($slug),
+            "foodItems" => $foodItems
         ]);
     }
 
@@ -55,7 +65,7 @@ class StaticPagesController extends Controller
             'email' => ['required', 'string'],
             'phone_number' => ['required', 'string'],
             'guests_total' => ['required', 'string'],
-            'time' => ['required', 'string'],
+            'time' => ['required'],
         ]);
 
         $reservation = new Reservation();

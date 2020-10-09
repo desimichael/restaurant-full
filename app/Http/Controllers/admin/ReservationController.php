@@ -32,7 +32,7 @@ class ReservationController extends Controller
             'email' => ['required', 'string'],
             'phone_number' => ['required', 'string'],
             'guest_total' => ['required', 'string'],
-            'time' => ['required']
+            'time' => ['required', 'string']
             ]);
 
         $reservation = new Reservation();

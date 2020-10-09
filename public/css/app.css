@@ -162,8 +162,9 @@ table {
 #menuPage p {
   font-size: 1rem;
   line-height: 1.5;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 2rem;
+  color: #302f30;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {

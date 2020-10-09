@@ -47,5 +47,12 @@ class FoodCategorySeeder extends Seeder
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ]);
+        DB::table('food_categories')->insert([
+            'title' => 'Hookahs',
+            'description' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cum sed veritatis non iure harum distinctio doloremque ipsum asperiores laboriosam?',
+            'image_url' => '/img/strawberry_cheesecake.png',
+            'updated_at' => Carbon::now(),
+            'created_at' => Carbon::now()
+        ]);
     }
 }
