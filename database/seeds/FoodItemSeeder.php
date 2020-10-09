@@ -229,11 +229,20 @@ class FoodItemSeeder extends Seeder
             'created_at' => Carbon::now()
         ]);
         DB::table('food_items')->insert([
-            'title' => 'Grape',
+            'title' => 'Coca Cola',
             'description' => 'Smoked Bacon, Cheddar Cheese and Kansas City BBQ Sauce topped with an onion ring.',
             'image_url' => '/img/garden_salad.png',
             'image_url' => '/img/garden_salad.png','price' =>19.99,
-            'category_id' => 6,
+            'category_id' => 7,
+            'updated_at' => Carbon::now(),
+            'created_at' => Carbon::now()
+        ]);
+        DB::table('food_items')->insert([
+            'title' => 'Sprite',
+            'description' => 'Smoked Bacon, Cheddar Cheese and Kansas City BBQ Sauce topped with an onion ring.',
+            'image_url' => '/img/garden_salad.png',
+            'image_url' => '/img/garden_salad.png','price' =>19.99,
+            'category_id' => 7,
             'updated_at' => Carbon::now(),
             'created_at' => Carbon::now()
         ]);
