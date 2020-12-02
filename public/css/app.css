@@ -505,7 +505,7 @@ body {
 
 #appLayout .sideMenu .logo {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-bottom: 35px;
 }
 
@@ -821,6 +821,11 @@ body {
 #foodPreview .container .foodSlider .slide .content img {
   max-width: 125px;
   width: 95%;
+}
+
+footer {
+  padding: 20px;
+  background: orange;
 }
 
 .contentBox {
